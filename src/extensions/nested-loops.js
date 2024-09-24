@@ -65,7 +65,21 @@ for(let i = 1; i < 11; i++){
 }
 // 6. As 5, update the array 'deepThree', but the result should be the average of the sum of the squares of the numbers in each array
 //       [[1],[[1],[2.5]],...]
-
+for(let i = 1; i < 11; i++){
+  let temp = []
+  for(let j = 1; j < i + 1; j++){
+    tempTwo = []
+    let sum = 0;
+    let count = 0;
+    for(let k = 1; k < j + 1; k++){
+      sum += k * k
+      count++
+    }
+    tempTwo.push(sum / count)
+    temp.push(tempTwo)
+  }
+  deepThree.push(temp)
+}
 module.exports = {
   START,
   END,
